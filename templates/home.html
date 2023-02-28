@@ -2,59 +2,45 @@
 <html>
   <head>
     <title>MwangaFloat</title>
-    <div style="text-align: right;">
-     <button>Sign up</button>  <button>Sign in</button>
-    </div>
-    <style>
-      h1 {
-        font-size: 60px;
-        font-family: Roboto;
-        font-weight: bold;
-        color: rgb(0, 255, 0);
-        text-align: center;
-      }
-
-      #mwangafloat {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-        fond-weight: normal;
-      }
-
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(255, 0, 0);
-        text-align: center;
-      }
-
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80, 80, 80);
-      }
-
-      #container {
-        max-width: 720px;
-        margin: 0 auto 0 auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-      <h1>Mwanga Float</h1>
-      <img id="mwangafloat" src="https://portfolio-project-1.bobokobase.repl.co/static/Bg.jpg">
-      <h2>About Mwanga Float</h2>
-      <p class="bodytext">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Condimentum mattis pellentesque id nibh tortor id aliquet. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Libero justo laoreet sit amet cursus sit. Ac turpis egestas integer eget aliquet nibh. Vel turpis nunc eget lorem dolor sed. Facilisi cras fermentum odio eu. Nisi lacus sed viverra tellus in hac habitasse. Suspendisse potenti nullam ac tortor vitae purus.
-  
-  Velit laoreet id donec ultrices tincidunt arcu non sodales neque. A diam maecenas sed enim ut. Pharetra magna ac placerat vestibulum lectus. Viverra adipiscing at in tellus integer feugiat. Suspendisse sed nisi lacus sed viverra. Rhoncus urna neque viverra justo nec ultrices dui sapien. In cursus turpis massa tincidunt dui. Blandit volutpat maecenas volutpat blandit aliquam etiam. Nec ultrices dui sapien eget. Fermentum dui faucibus in ornare quam viverra orci. Tristique senectus et netus et malesuada fames. Facilisis sed odio morbi quis commodo odio aenean. Arcu dictum varius duis at. Id ornare arcu odio ut sem nulla.
-      </p>
-      <h3>User Experience</h3>
-      <p class="bodytext">TO DO testimonials</p>
-      <div style="text-align: center;">
-      <button>Contact Us</button>
-        <p>Copyright 2023, ALX, Robert Okoba</p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <style>
+        #Bg {
+          height: 420px;
+          width: 100%;
+          object-fit: cover;
+        }
+      </style>
+    </head>
+    <button class="btn btn-secondary mt-4 mb-2">Sign up</button>  <button class="btn btn-secondary mt-4 mb-2">Sign in</button>
+    <body>
+      <div class="container">
+        <h1>Mwanga Float</h1>
+        <img class="img-fluid" id="mwangafloat" src="https://portfolio-project-1.bobokobase.repl.co/static/Bg.jpg">
+        <h2>About Mwanga Float</h2>
+        <p>
+          Mwanga Float is revolutionizing mobile money transfer services by implementing a serialized banknotes traceability system that sets a new standard for fraud prevention. With this system, we're able to provide our users with the highest level of security and peace of mind, knowing that every transaction is tracked and monitored from start to finish. 
+          By using unique serialization codes, we're able to quickly identify and investigate any suspicious activity, and take immediate action to prevent fraud and protect our users. At Mwanga Float, we're committed to delivering a safe and reliable platform that makes mobile money transfer easy and accessible for everyone
+        </p>
+        <h3 class="text-center mt-2 mb-4">User Experience</h3>
+        <div>
+          {% for user in user_experience%}
+            <div class="border-bottom" style="margin-bottom:16px;">
+              <h4 
+                style="color: rgb(120, 120, 120); margin-bottom:4px;">
+                {{user['name']}}
+              </h4>
+              <div>
+                <b>Experience:</b> {{user['experience']}}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div style="text-align: center;">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+          <p class="mt-4 mb-2">Copyright 2023, ALX, Robert Okoba</p>
+        </div>
+      </body>
       </div>
-    </body>
-    </div>
 </html>
